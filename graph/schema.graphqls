@@ -1,0 +1,29 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Transaction {
+  ID: String!
+  Status: TransactionStatus!
+  Date: Time!
+  Name: String!
+  Type: TransactionType!
+  Amount:Int!
+}
+
+scalar Time
+
+type Query {
+  fetchTransactions: [Transaction!]!
+}
+
+enum TransactionStatus {
+  PENDING
+  INITIATED
+  COMPLETED
+}
+
+enum TransactionType {
+  CREDIT
+  DEBIT
+}
