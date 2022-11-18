@@ -9,7 +9,7 @@ import (
 )
 
 func GetTransactions() []*model.Transaction {
-	var txlist = make([]*model.Transaction, 20)
+	var txlist = make([]*model.Transaction, 50)
 
 	for i := 0; i < 50; i++ {
 		txlist[i] = &model.Transaction{
