@@ -11,7 +11,7 @@ import (
 func GetTransactions() []*model.Transaction {
 	var txlist = make([]*model.Transaction, 20)
 
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 50; i++ {
 		txlist[i] = &model.Transaction{
 			ID:     uuid.NewV4().String(),
 			Status: model.AllTransactionStatus[rand.Intn(len(model.AllTransactionStatus))],
